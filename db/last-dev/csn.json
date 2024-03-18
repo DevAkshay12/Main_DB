@@ -1,0 +1,416 @@
+{
+  "namespace": "proj_schema",
+  "definitions": {
+    "proj_schema.PAN_vendor_data": {
+      "kind": "entity",
+      "@cds.persistence.journal": true,
+      "elements": {
+        "Proposed_Vendor_Code": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "PROPOSED_VENDOR_CODE"
+        },
+        "PAN_Number": {
+          "key": true,
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "PAN_NUMBER"
+        },
+        "Awarded_Vendor": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "AWARDED_VENDOR"
+        },
+        "Vendor_Name": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "VENDOR_NAME"
+        },
+        "Vendor_Location": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "VENDOR_LOCATION"
+        },
+        "Technically_Approved": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "TECHNICALLY_APPROVED"
+        },
+        "Client_Approved": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "CLIENT_APPROVED"
+        },
+        "Original_quote": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "ORIGINAL_QUOTE"
+        },
+        "Final_Quote": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "FINAL_QUOTE"
+        },
+        "Order_amount_OR_Split_order_amount": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "ORDER_AMOUNT_OR_SPLIT_ORDER_AMOUNT"
+        },
+        "Discount_Amount": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "DISCOUNT_AMOUNT"
+        },
+        "Discount_percentage": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "DISCOUNT_PERCENTAGE"
+        },
+        "Rank": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "RANK"
+        },
+        "Proposed_Vendor_Name": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "PROPOSED_VENDOR_NAME"
+        },
+        "Supplier_Origin_State": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "SUPPLIER_ORIGIN_STATE"
+        },
+        "Destination_State_BKTShipDASHto_LocationBKT": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "DESTINATION_STATE_BKTSHIPDASHTO_LOCATIONBKT"
+        },
+        "Vendor_GST_Number": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "VENDOR_GST_NUMBER"
+        },
+        "Vendor_CE_Score": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "VENDOR_CE_SCORE"
+        },
+        "Vendor_CE_Date": {
+          "type": "cds.Date",
+          "@cds.persistence.name": "VENDOR_CE_DATE"
+        },
+        "Vendor_PE_Score": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "VENDOR_PE_SCORE"
+        },
+        "Vendor_PE_Date": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "VENDOR_PE_DATE"
+        },
+        "Vendor_Contact_PersonDASH1": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "VENDOR_CONTACT_PERSONDASH1"
+        },
+        "Vendor_Contact_PersonDASH2": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "VENDOR_CONTACT_PERSONDASH2"
+        },
+        "Technical_Committee_who_cleared_the_proposal": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "TECHNICAL_COMMITTEE_WHO_CLEARED_THE_PROPOSAL"
+        },
+        "Commercial_Committee_who_cleared_the_proposal": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "COMMERCIAL_COMMITTEE_WHO_CLEARED_THE_PROPOSAL"
+        },
+        "Vendor_References_to_be_displayed_in_Order": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "VENDOR_REFERENCES_TO_BE_DISPLAYED_IN_ORDER"
+        },
+        "Shortlisted_Vendors_Response_summary": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "SHORTLISTED_VENDORS_RESPONSE_SUMMARY"
+        },
+        "Order_Value_BKTIn_Project_CurrencyBKT": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "ORDER_VALUE_BKTIN_PROJECT_CURRENCYBKT"
+        },
+        "Order_Value_BKTIn_Bid_CurrencyBKT": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "ORDER_VALUE_BKTIN_BID_CURRENCYBKT"
+        },
+        "Vendor_Final_Quotation_Date": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "VENDOR_FINAL_QUOTATION_DATE"
+        },
+        "Vendor_Final_Quotation_Amount": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "VENDOR_FINAL_QUOTATION_AMOUNT"
+        },
+        "Project_CurrencyORBase_Currency": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "PROJECT_CURRENCYORBASE_CURRENCY"
+        },
+        "Order_CurrencyORBid_currency": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "ORDER_CURRENCYORBID_CURRENCY"
+        },
+        "Incoterms": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "INCOTERMS"
+        },
+        "Number_of_Back_to_back_Terms_agreed_with_Vendor_as_per_GPC_OR_GCC": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "NUMBER_OF_BACK_TO_BACK_TERMS_AGREED_WITH_VENDOR_AS_PER_GPC_OR_GCC"
+        },
+        "Details_of_deviated_or_better_terms_agreed_with_the_Vendor": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "DETAILS_OF_DEVIATED_OR_BETTER_TERMS_AGREED_WITH_THE_VENDOR"
+        },
+        "Market_Scenario_and_Demand": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "MARKET_SCENARIO_AND_DEMAND"
+        },
+        "Companys_Position_and_Market_dynamics_of_this_purchase": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "COMPANYS_POSITION_AND_MARKET_DYNAMICS_OF_THIS_PURCHASE"
+        },
+        "Should_Be_Cost_estimated": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "SHOULD_BE_COST_ESTIMATED"
+        },
+        "Highlights_of_this_proposal_and_Price_Justification_for_this_proposal": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "HIGHLIGHTS_OF_THIS_PROPOSAL_AND_PRICE_JUSTIFICATION_FOR_THIS_PROPOSAL"
+        },
+        "Price_Escalation_Agreed_if_any": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "PRICE_ESCALATION_AGREED_IF_ANY"
+        },
+        "Particulars_of_any_Free_Service_OR_Supply_Guarantees_OR_Warrant_yfrom_Vendor": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "PARTICULARS_OF_ANY_FREE_SERVICE_OR_SUPPLY_GUARANTEES_OR_WARRANT_YFROM_VENDOR"
+        },
+        "Transportation": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "TRANSPORTATION"
+        },
+        "Logistics_Cost": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "LOGISTICS_COST"
+        },
+        "Delivery_Schedule": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "DELIVERY_SCHEDULE"
+        },
+        "Tax_Details": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "TAX_DETAILS"
+        },
+        "Additional_Remarks": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "ADDITIONAL_REMARKS"
+        },
+        "ABG": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "ABG"
+        },
+        "ABG_Value": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "ABG_VALUE"
+        },
+        "CPBG": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "CPBG"
+        },
+        "CPBG_Value": {
+          "type": "cds.String",
+          "length": 5000,
+          "@cds.persistence.name": "CPBG_VALUE"
+        },
+        "Scope_and_Responsibilities": {
+          "type": "cds.LargeString",
+          "@cds.persistence.name": "SCOPE_AND_RESPONSIBILITIES"
+        },
+        "Commercial_Terms": {
+          "type": "cds.LargeString",
+          "@cds.persistence.name": "COMMERCIAL_TERMS"
+        },
+        "Compliance_Terms": {
+          "type": "cds.LargeString",
+          "@cds.persistence.name": "COMPLIANCE_TERMS"
+        },
+        "Others": {
+          "type": "cds.LargeString",
+          "@cds.persistence.name": "OTHERS"
+        },
+        "vendtovenr": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "proj_schema.PAN_vendor_response",
+          "on": [
+            {
+              "ref": [
+                "vendtovenr",
+                "venrtovend_Proposed_Vendor_Code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "Proposed_Vendor_Code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "vendtovenr",
+                "venrtovend_PAN_Number"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "PAN_Number"
+              ]
+            }
+          ],
+          "@cds.persistence.name": "VENDTOVENR"
+        },
+        "vendtoptd": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "proj_schema.PAN_PAYMENT_TERM_DETAILS",
+          "on": [
+            {
+              "ref": [
+                "Proposed_Vendor_Code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "vendtoptd",
+                "Proposed_Vendor_Code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "vendtoptd",
+                "PAN_Number"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "PAN_Number"
+              ]
+            }
+          ],
+          "@cds.persistence.name": "VENDTOPTD"
+        },
+        "vendtopd": {
+          "type": "cds.Composition",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "proj_schema.PAN_PRICE_DETAILS",
+          "on": [
+            {
+              "ref": [
+                "Proposed_Vendor_Code"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "vendtopd",
+                "Proposed_Vendor_Code"
+              ]
+            },
+            "and",
+            {
+              "ref": [
+                "vendtopd",
+                "PAN_Number"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "PAN_Number"
+              ]
+            }
+          ],
+          "@cds.persistence.name": "VENDTOPD"
+        },
+        "vendor_datatotab1": {
+          "type": "cds.Association",
+          "cardinality": {
+            "max": 1
+          },
+          "target": "proj_schema.PAN_Details",
+          "on": [
+            {
+              "ref": [
+                "vendor_datatotab1",
+                "PAN_Number"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "PAN_Number"
+              ]
+            }
+          ],
+          "@cds.persistence.name": "VENDOR_DATATOTAB1"
+        }
+      },
+      "@cds.persistence.name": "PROJ_SCHEMA_PAN_VENDOR_DATA"
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v4.5.0",
+    "build": "CDS Build v7.5.3"
+  },
+  "$version": "2.0"
+}

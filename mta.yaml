@@ -1,0 +1,107 @@
+_schema-version: "3.1"
+ID: main_db2
+description: A simple CAP project.
+version: 1.0.0
+modules:
+- name: main_db2-srv
+  type: nodejs
+  path: gen/srv
+  requires:
+  - name: main_db2-destination-service
+  - name: main_db2-auth
+  - name: main_db2-db
+  provides:
+  - name: srv-api
+    properties:
+      srv-url: ${default-url}
+  parameters:
+    buildpack: nodejs_buildpack
+  build-parameters:
+    builder: npm
+- name: main_db2-db-deployer
+  type: hdb
+  path: gen/db
+  requires:
+  - name: main_db2-db
+  parameters:
+    buildpack: nodejs_buildpack
+- name: main_db2-destination-content
+  type: com.sap.application.content
+  requires:
+  - name: main_db2-destination-service
+    parameters:
+      content-target: true
+  - name: main_db2_html_repo_host
+    parameters:
+      service-key:
+        name: main_db2_html_repo_host-key
+  - name: main_db2-auth
+    parameters:
+      service-key:
+        name: main_db2-auth-key
+  parameters:
+    content:
+      instance:
+        destinations:
+        - Name: maindbAppRout_main_db2_html_repo_host
+          ServiceInstanceName: main_db2-html5-app-host-service
+          ServiceKeyName: main_db2_html_repo_host-key
+          sap.cloud.service: maindbAppRout
+        - Authentication: OAuth2UserTokenExchange
+          Name: maindbAppRout_main_db2_auth
+          ServiceInstanceName: main_db2-auth
+          ServiceKeyName: main_db2-auth-key
+          sap.cloud.service: maindbAppRout
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
+resources:
+- name: main_db2-auth
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      tenant-mode: dedicated
+      xsappname: main_db2
+    path: ./xs-security.json
+    service: xsuaa
+    service-plan: application
+- name: main_db2-db
+  type: com.sap.xs.hdi-container
+  parameters:
+    service: hana
+    service-plan: hdi-shared
+- name: main_db2-destination-service
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: true
+      init_data:
+        instance:
+          destinations:
+            - Authentication: NoAuthentication
+              HTML5.DynamicDestination: true
+              HTML5.ForwardAuthToken: true
+              Name: Dynamic_Iflow-srv-api
+              ProxyType: Internet
+              Type: HTTP
+              URL: ~{srv-api/srv-url}
+          existing_destinations_policy: update
+      version: 1.0.0
+    service: destination
+    service-name: main_db2-destination-service
+    service-plan: lite
+  requires:
+    - name: srv-api
+- name: main_db2_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-name: main_db2-html5-app-host-service
+    service-plan: app-host
+parameters:
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+  - builder: custom
+    commands:
+    - npx cds build --production
