@@ -16,7 +16,7 @@ service PanApproval {
  entity approversKeys as projection on my.approversKeys;
 //  entity generaldetails_TAB as projection on my.generaldetails;
 //  entity vendor_response_TAB as projection on my.vendor_response;
-//  entity price_details_TAB as projection on my.price_details;
+//  entity price_degit config --list tails_TAB as projection on my.price_details;
 //  entity vendordata_TAB as projection on my.vendordata;
 }
 service CatalogService {
