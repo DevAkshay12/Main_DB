@@ -1,5 +1,5 @@
 using { proj_schema as my } from '../db/schema';
-@requires: 'authenticated-user'
+// @requires: 'authenticated-user'
 service PanApproval {
  entity PAN_Details_APR as projection on my.PAN_Details;
  entity PAN_WEB_EVENT_APR as projection on my.PAN_WEB_EVENT;
@@ -13,6 +13,11 @@ service PanApproval {
  entity PAN_Payment_Method_Drop_APR as projection on my.PAN_Payment_Method_Drop;
  entity PAN_Comments_APR as projection on my.PAN_Comments;
  entity vendorTaxDetails_APR as projection on my.vendorTaxDetails;
+ entity approversKeys as projection on my.approversKeys;
+//  entity generaldetails_TAB as projection on my.generaldetails;
+//  entity vendor_response_TAB as projection on my.vendor_response;
+//  entity price_details_TAB as projection on my.price_details;
+//  entity vendordata_TAB as projection on my.vendordata;
 }
 service CatalogService {
     @odata.draft.enabled

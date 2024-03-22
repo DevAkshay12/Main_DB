@@ -9,9 +9,6 @@
     "hdbindex": {
       "plugin_name": "com.sap.hana.di.index"
     },
-    "hdbmigrationtable": {
-      "plugin_name": "com.sap.hana.di.table.migration"
-    },
     "hdbtable": {
       "plugin_name": "com.sap.hana.di.table"
     },

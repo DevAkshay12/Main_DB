@@ -147,7 +147,7 @@ timeTakenForApproval:String;
 tab3totab1 : Association to one PAN_Details on tab3totab1.PAN_Number = PAN_Number; 
 }
 
-@cds.persistence.journal
+// @cds.persistence.journal
 entity PAN_vendor_data {
     //vendor response summary table
 key Proposed_Vendor_Code : String; //disp
@@ -398,5 +398,39 @@ entity vendorTaxDetails{
   name :String;
   value :String;
 }
+
+entity approversKeys{
+  key PAN_Number:String;
+  key approver :String;
+  key keyy :String;
+}
+
+// entity generaldetails{
+//   key app_name:String;
+//   key field_name : String;
+//       value:String;
+// }
+
+// entity vendor_response{
+//    key app_name:String;
+//   key field_name : String;
+//       value:String;
+// }
+
+// entity price_details{
+//    key app_name:String;
+//   key field_name : String;
+//       value:String;
+// }
+
+// entity vendordata{
+//  key app_name:String;
+//   key field_name : String;
+//       value:String;
+// }
+
+
+
+
 
 
