@@ -42,7 +42,7 @@ VIEW CatalogService_tab1 AS SELECT
   PAN_Details_0.submitted_by,
   PAN_Details_0.submitted_date
 FROM proj_schema_PAN_Details AS PAN_Details_0
-WHERE PAN_Details_0.created_by = SESSION_CONTEXT('APPLICATIONUSER') AND ltrim(rtrim(PAN_Details_0.task_id)) != ''
+WHERE PAN_Details_0.created_by = 'rajendraakshay1@gmail.com' AND ltrim(rtrim(PAN_Details_0.task_id)) != ''
 WITH ASSOCIATIONS (
   MANY TO MANY JOIN CatalogService_tab2 AS tab1totab2 ON (PAN_Number = tab1totab2.PAN_Number),
   MANY TO MANY JOIN CatalogService_tab3 AS tab1totab3 ON (PAN_Number = tab1totab3.PAN_Number),

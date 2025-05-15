@@ -1261,7 +1261,48 @@
           "ref": [
             "proj_schema.PAN_Details"
           ]
-        }
+        },
+        "where": [
+          {
+            "ref": [
+              "created_by"
+            ]
+          },
+          "=",
+          {
+            "val": "rajendraakshay1@gmail.com"
+          },
+          "and",
+          {
+            "func": "ltrim",
+            "args": [
+              {
+                "func": "rtrim",
+                "args": [
+                  {
+                    "ref": [
+                      "task_id"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "!=",
+          {
+            "val": ""
+          },
+          "and",
+          {
+            "ref": [
+              "status"
+            ]
+          },
+          "=",
+          {
+            "val": "pending for Approval"
+          }
+        ]
       },
       "elements": {
         "PAN_Number": {
@@ -2608,10 +2649,7 @@
           },
           "=",
           {
-            "ref": [
-              "$user",
-              "id"
-            ]
+            "val": "rajendraakshay1@gmail.com"
           },
           "and",
           {

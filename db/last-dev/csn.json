@@ -1,0 +1,9 @@
+{
+  "namespace": "proj_schema",
+  "definitions": {},
+  "meta": {
+    "creator": "CDS Compiler v4.5.0",
+    "build": "CDS Build v7.5.3"
+  },
+  "$version": "2.0"
+}
